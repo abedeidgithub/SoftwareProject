@@ -1,67 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white"
-
-    >
-
-    <ImageView
-        android:id="@+id/messageIcon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/subject_gadwal"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:contentDescription="content_desc_message_icon"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:src="@drawable/link2" />
+    android:orientation="vertical">
 
 
-    <TextView
-        android:id="@+id/_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_toLeftOf="@+id/messageIcon"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:text="elgayar "
-        android:textColor="@android:color/background_dark"
-        android:textSize="30dp"
+
+        <TextView
+            android:id="@+id/Dg_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@+id/messageIcon"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:text="elgayar "
+            android:textColor="@android:color/background_dark"
+            android:textSize="30dp"
+
+            />
+
+        <TextView
+            android:id="@+id/Dg_subject_gadwal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/_name"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/_name"
+            android:layout_weight="1"
+            android:paddingBottom="@dimen/message_vertical_padding"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/message_vertical_padding"
+            android:text="Subject"
+            android:textColor="#111"
+            android:textSize="20sp" />
 
 
-        />
 
-
-    <TextView
-        android:id="@+id/subject_gadwal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@id/_name"
-        android:layout_marginTop="10dp"
-        android:paddingBottom="@dimen/message_vertical_padding"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/message_vertical_padding"
-
-
-        android:text="Very important !!"
-        android:textColor="#111"
-        android:textSize="20sp"
-
-
-        />
 
 
     <TextView
-        android:id="@+id/time"
+        android:id="@+id/Dg_Begin_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/subject_gadwal"
-        android:layout_toRightOf="@+id/subject_gadwal"
         android:text="   Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        />
+    <TextView
+        android:id="@+id/Dg_End_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   Large Text"
+        />
+
+        <TextView
+            android:id="@+id/Dg_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Large Text"
+            />
+    <TextView
+        android:id="@+id/Dg_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   Large Text"
+        />
 
 
-</RelativeLayout>
+</LinearLayout>
