@@ -46,8 +46,6 @@ String day;
         dlist = new ArrayList<String>();
         list = (ListView) getActivity().findViewById(R.id.list3);
         Calendar c = Calendar.getInstance();
-        int MINUTE = c.get(Calendar.MINUTE);
-        int HOUR=c.get(Calendar.HOUR);
         int Day=c.get(Calendar.DAY_OF_WEEK);
         if (Day == 2) day = "monday";
         else if (Day== 3) day = "tuesday";
@@ -73,7 +71,7 @@ String day;
             @Override
             public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 Map<String, String> m = dataSnapshot.getValue(Map.class);
-                if (m.get("group").equals(Group) && m.get("year").equals(Year) && m.get("section").equals(Section) && m.get("day").toString().equals("sunday")) {
+                if (m.get("group").equals(Group) && m.get("year").equals(Year) && m.get("section").equals(Section) && m.get("day").toString().equals(day)) {
                     d = ((m.get("name").toString()) + " doctor " + (m.get("subject").toString()) + " Subject " + (m.get("begin").toString()) + " begin " + (m.get("end").toString()) + " end " + (m.get("hall").toString()) + " place");
                     dlist.add(d);
                     gadwal_adpter.notifyDataSetChanged();
