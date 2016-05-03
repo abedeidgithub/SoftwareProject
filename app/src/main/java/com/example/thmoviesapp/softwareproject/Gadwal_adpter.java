@@ -51,7 +51,6 @@ public class Gadwal_adpter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.gadwal_item, parent, false);
         TextView username = (TextView) convertView.findViewById(R.id.Dg_name);
         TextView Subject = (TextView) convertView.findViewById(R.id.Dg_subject_gadwal);
-        TextView time = (TextView) convertView.findViewById(R.id.Dg_time);
         TextView begain = (TextView) convertView.findViewById(R.id.Dg_Begin_time);
         TextView end = (TextView) convertView.findViewById(R.id.Dg_End_time);
         TextView place = (TextView) convertView.findViewById(R.id.Dg_place);
@@ -61,12 +60,11 @@ public class Gadwal_adpter extends BaseAdapter {
         String[] part = parts[1].split("Subject ");
         Subject.setText(part[0].toString());
         String[] par = part[1].split("begin");
-        begain.setText(par[0]);
+        begain.setText("From :"+par[0].trim());
         String[] pa = par[1].split("end");
-        end.setText(pa[0]);
-        time.setText("" + (Double.parseDouble(pa[0]) - Double.parseDouble(par[0])));
+        end.setText("   To :"+pa[0].trim());
         String[] p1 = pa[1].split("place");
-        place.setText(p1[0]);
+        place.setText("Place :"+p1[0].trim());
         return convertView;
     }
 
